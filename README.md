@@ -64,7 +64,7 @@ below all steps help to register notification service to your app.
 ```
 4. Create blank notificationService class inside your service folder by extending NotificationListenerService with @override method.
 
-5. Final step just register notificationService service in Manifest.xml file.
+5. Final step just register notificationService in Manifest.xml file.
 ```
         <service
             android:name=".services.NotificationService"
