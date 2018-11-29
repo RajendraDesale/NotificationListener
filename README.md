@@ -3,7 +3,7 @@
 
 below all steps help to register notification service to your app.
 
-1 - put below code in Activity OnCreate Method.
+1. Put below code in Activity OnCreate Method.
 ```
  try {
       boolean temp = isNotificationServiceRunning();
@@ -16,7 +16,7 @@ below all steps help to register notification service to your app.
             e.printStackTrace();
         }
 ```
-2 - create showNotificationEnableAlertDialog() method in your activity for popup.
+2. Create showNotificationEnableAlertDialog() method in your activity for popup.
 ```
  public void showNotificationEnableAlertDialog(String msg, String yesbtnText, String nobtnText, boolean isEnable) {
         AlertDialog.Builder builder = new AlertDialog.Builder(HomeActivity.this);
@@ -53,7 +53,7 @@ below all steps help to register notification service to your app.
         }
     }
 ```
-3 - create isNotificationServiceRunning() method in your activity for checking if notification service is on or off for your app.
+3. Create isNotificationServiceRunning() method in your activity for checking if notification service is on or off for your app.
 ```
     private boolean isNotificationServiceRunning() {
         ContentResolver contentResolver = getContentResolver();
@@ -62,7 +62,7 @@ below all steps help to register notification service to your app.
         return enabledNotificationListeners != null && enabledNotificationListeners.contains(packageName);
     }
 ```
-4 - create blank notificationService class inside your service folder by extending NotificationListenerService with @override method.
+4. Create blank notificationService class inside your service folder by extending NotificationListenerService with @override method.
 
 5. Final step just register notificationService service in Manifest.xml file.
 ```
